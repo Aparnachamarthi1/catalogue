@@ -13,15 +13,21 @@ pipeline {
         }
     
        
-//         //sonar-scanner command expect sonar-project.properties should be available
-       stage('Sonar Scan') {
-            steps {
-                sh 'ls -ltr'
-                sh 'sonar-scanner'
-              }
-          }
-    }
-}     
+// //         //sonar-scanner command expect sonar-project.properties should be available
+//        stage('Sonar Scan') {
+//             steps {
+//                 sh 'ls -ltr'
+//                 sh 'sonar-scanner'
+//               }
+//           }
+        stage('Build') {
+           steps {
+               sh 'ls -ltr'
+           }
+        }      
+
+    //}
+//}     
           
 //         stage('Build') {
 //             steps {
