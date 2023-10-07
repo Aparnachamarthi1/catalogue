@@ -23,6 +23,7 @@ pipeline {
         stage('Build') {
            steps {
                sh 'ls -ltr'
+               sh 'zip -r ./* --exclude.git --exclude.zip'
            }
         }      
 
@@ -63,10 +64,11 @@ pipeline {
 //         }
 //     }
 
-//     post{
-//         always{
-//             echo 'cleaning up workspace'
-//             deleteDir()
-//         }
+     post{
+         always{
+            echo 'cleaning up workspace'
+             deleteDir()
+         }
     }
  }
+}
