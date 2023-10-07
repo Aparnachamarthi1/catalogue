@@ -12,7 +12,7 @@ pipeline {
             }
         }
     
-    }          
+              
 // //         //sonar-scanner command expect sonar-project.properties should be available
 //        stage('Sonar Scan') {
 //             steps {
@@ -27,7 +27,7 @@ pipeline {
            }
         }      
 
-    //}
+    }
 //}     
           
 //         stage('Build') {
