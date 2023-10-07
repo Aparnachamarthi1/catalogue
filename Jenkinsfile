@@ -68,5 +68,5 @@ pipeline {
 //             echo 'cleaning up workspace'
 //             deleteDir()
 //         }
-//     }
-// }
+    }
+ }
