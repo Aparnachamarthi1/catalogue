@@ -1,19 +1,6 @@
 pipeline {
     agent { node { label 'AGENT-1' } }
-    environment{
-        //here if we create any variables we will have global access, since it is environment no need pf def
-    packageVersion= ''
-    }
     stages {
-        stage('Get version'){
-            steps{
-                script{
-                def packageJson = readJSON(file: 'package.json')
-                 packageVersion = packageJson.version
-                echo "version: ${packageVersion}"
-            }
-            }}
-        
         stage('Install depdencies') {
             steps {
                 sh 'npm install'
@@ -42,7 +29,7 @@ pipeline {
                 nexusArtifactUploader(
                     nexusVersion: 'nexus3',
                     protocol: 'http',
-                    nexusUrl: '44.212.58.220:8081/',
+                    nexusUrl: '172.31.39.206:8081/',
                     groupId: 'com.roboshop',
                     version: '1.0.1',
                     repository: 'catalogue',
