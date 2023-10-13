@@ -12,7 +12,7 @@ pipeline {
                  packageVersion = packageJson.version
                 echo "version: ${packageVersion}"
             }
-            }}}
+            }}
         
         stage('Install depdencies') {
             steps {
@@ -71,3 +71,4 @@ pipeline {
             deleteDir()
         }
     }
+}
