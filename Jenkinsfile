@@ -10,7 +10,8 @@ pipeline {
                 
             }
         }
-    }    
+        }
+    }   
     stages {
         stage('Install depdencies') {
             steps {
@@ -71,4 +72,3 @@ pipeline {
     }
 }
 
-}
