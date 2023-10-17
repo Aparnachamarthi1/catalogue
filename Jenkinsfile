@@ -1,5 +1,10 @@
 pipeline {
     agent { node { label 'AGENT-1' } }
+
+    environment{
+        //here if we create any variables we will have global access, since it is environment no need pf def
+         packageVersion= ''
+    }
     stages {
         stage('Get version'){
             steps{
